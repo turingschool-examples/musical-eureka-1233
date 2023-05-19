@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "ingredients index page" do
+RSpec.describe "ingredients index page", type: :feature do
   before :each do
     @beef = Ingredient.create!(name: "Beef", cost: 4)
     @potatoes = Ingredient.create!(name: "Potatoes", cost: 6)
