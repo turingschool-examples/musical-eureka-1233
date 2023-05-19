@@ -218,10 +218,7 @@
       "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/config/routes.rb": {
         "lines": [
           1,
-          null,
-          null,
-          null,
-          null,
+          1,
           null
         ]
       },
@@ -247,8 +244,23 @@
           1,
           null
         ]
+      },
+      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/controllers/ingredients_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1684526409
+    "timestamp": 1684527483
   }
 }
