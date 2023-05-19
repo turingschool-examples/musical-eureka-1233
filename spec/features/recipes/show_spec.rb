@@ -9,7 +9,7 @@ RSpec.describe "Recipe Show Page", type: :feature do
     it "shows the recipe name, complexity, and genre" do
       visit "/recipes/#{@burger.id}"
 
-      expect(page).to have_content("Recipe: #{@burger.name}")
+      expect(page).to have_content("Name: #{@burger.name}")
       expect(page).to have_content("Complexity: #{@burger.complexity}")
       expect(page).to have_content("Genre: #{@burger.genre}")
       expect(page).to_not have_content("#{@gc.name}")
@@ -17,7 +17,7 @@ RSpec.describe "Recipe Show Page", type: :feature do
 
       visit "/recipes/#{@gc.id}"
 
-      expect(page).to have_content("Recipe: #{@gc.name}")
+      expect(page).to have_content("Name: #{@gc.name}")
       expect(page).to have_content("Complexity: #{@gc.complexity}")
       expect(page).to have_content("Genre: #{@gc.genre}")
       expect(page).to_not have_content("#{@burger.name}")
@@ -25,7 +25,7 @@ RSpec.describe "Recipe Show Page", type: :feature do
 
       visit "/recipes/#{@struggle.id}"
 
-      expect(page).to have_content("Recipe: #{@struggle.name}")
+      expect(page).to have_content("Name: #{@struggle.name}")
       expect(page).to have_content("Complexity: #{@struggle.complexity}")
       expect(page).to have_content("Genre: #{@struggle.genre}")
       expect(page).to_not have_content("#{@burger.name}")
