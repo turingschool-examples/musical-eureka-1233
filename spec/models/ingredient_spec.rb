@@ -21,5 +21,5 @@ RSpec.describe Ingredient, type: :model do
           expect(Ingredient.alpha_ingredients).to eq([@tomato, @bread, @bun, @beef, @cheese])
         end
       end
-    end
+   end
 end

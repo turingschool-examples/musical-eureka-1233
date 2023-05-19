@@ -230,69 +230,11 @@
           null
         ]
       },
-      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/spec/features/recipes/show_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/models/ingredient.rb": {
+      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/models/recipe_ingredient.rb": {
         "lines": [
           1,
           1,
-          null,
           1,
-          1,
-          null,
-          1,
-          2,
-          null,
           null
         ]
       },
@@ -300,6 +242,38 @@
         "lines": [
           1,
           1,
+          null
+        ]
+      },
+      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/spec/models/recipe_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -312,44 +286,12 @@
           1,
           null,
           1,
-          9,
-          null,
-          null
-        ]
-      },
-      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/models/recipe_ingredient.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/controllers/ingredients_controller.rb": {
-        "lines": [
-          1,
-          1,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/controllers/recipes_controller.rb": {
-        "lines": [
-          1,
-          1,
-          6,
+          0,
           null,
           null
         ]
       }
     },
-    "timestamp": 1684531910
+    "timestamp": 1684532205
   }
 }
