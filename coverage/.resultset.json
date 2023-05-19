@@ -219,12 +219,53 @@
         "lines": [
           1,
           1,
+          null,
+          1,
           null
         ]
       },
       "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/spec/features/recipes/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
           null
         ]
       },
@@ -245,6 +286,24 @@
           null
         ]
       },
+      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/models/recipe.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/models/recipe_ingredient.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/controllers/ingredients_controller.rb": {
         "lines": [
           1,
@@ -259,8 +318,17 @@
           1,
           null
         ]
+      },
+      "/Users/nicksacco/repeat_2mod/independent_challenges/actual_ics/week2/musical-eureka-1233/app/controllers/recipes_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1684527483
+    "timestamp": 1684528739
   }
 }
