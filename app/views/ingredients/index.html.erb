@@ -1,0 +1,9 @@
+<h1>Ingredient Index Page</h1>
+
+<ul>
+  <% @ingredients.each do |ingredient| %>
+    <li id="ingredient_<%= ingredient.id %>">
+      Name: <%= ingredient.name %> Cost: <%= ingredient.cost %>
+    </li>
+  <% end %>
+</ul>
