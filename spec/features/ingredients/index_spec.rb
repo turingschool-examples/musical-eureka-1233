@@ -19,5 +19,20 @@ RSpec.describe "Ingredients Index" do
       expect(page).to have_content("Ground Beef: 2")
       expect(page).to have_content("Salt: 100")
     end
+
+    # Extension 1 - Ingredients Sorted Alphabetically
+
+    # As a visitor,
+    # When I visit '/ingredients',
+    # Then I see that the list of ingredients is sorted alphabetically by name
+
+    it 'shows the ingredients sorted alphabetically by name' do 
+      ingredient_1 = Ingredient.create!(name: "Xantham gum", cost: 2)
+      ingredient_2 = Ingredient.create!(name: "Salt", cost: 100)
+
+      visit '/ingredients'
+
+      expect(ingredient_2.name).to appear_before(ingredient_1.name) 
+    end
   end
 end
