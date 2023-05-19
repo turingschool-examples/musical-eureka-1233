@@ -1,3 +1,12 @@
+def test_data
+  @beef = Ingredient.create!(name: "Ground Beef", cost: 4)
+  @cheese = Ingredient.create!(name: "Yellow Kind", cost: 2)
+  @tomato = Ingredient.create!(name: "Big Tomato", cost: 5)
+  @bun = Ingredient.create!(name: "Burger Bun", cost: 1)
+end
+
+
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
