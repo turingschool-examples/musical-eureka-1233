@@ -25,5 +25,14 @@ RSpec.describe "Ingredient Index page '/ingredient'", type: :feature do
         expect(page).to_not have_content("Name: #{@tomato.name}")
       end
     end
+
+    it "lists all ingredients in alphabetical order" do
+      visit '/ingredients'
+
+      expect(@tomato.name).to appear_before(@bread.name)
+      expect(@bread.name).to appear_before(@bun.name)
+      expect(@bun.name).to appear_before(@beef.name)
+      expect(@beef.name).to appear_before(@cheese.name)
+    end
   end
 end
