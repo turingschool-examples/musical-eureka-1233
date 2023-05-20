@@ -7,4 +7,8 @@ class Ingredient < ApplicationRecord
     @ingredients = Ingredient.all
     cost = @ingredients.sum { |ingredient| ingredient.cost }
   end
+
+  def self.sort_alphabetical
+    Ingredient.order(:name)
+  end
 end
