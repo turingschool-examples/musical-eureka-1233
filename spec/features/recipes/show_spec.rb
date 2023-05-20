@@ -14,5 +14,7 @@ RSpec.describe "recipes show page" do
     expect(page).to have_content("Ingredients:")
     expect(page).to have_content("Beans")
     expect(page).to have_content("Garlic Powder")
+
+    expect(page).to have_content("Total Cost: 4")
   end
 end
