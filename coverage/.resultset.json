@@ -222,12 +222,57 @@
           null,
           null,
           null,
+          null,
+          1,
+          null,
+          1,
           null
         ]
       },
       "/Users/michaelcallahan/turing_work/2mod/musical-eureka-1233/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/michaelcallahan/turing_work/2mod/musical-eureka-1233/spec/features/recipes/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/michaelcallahan/turing_work/2mod/musical-eureka-1233/spec/models/ingredient_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
           null
         ]
       },
@@ -295,8 +340,32 @@
           1,
           null
         ]
+      },
+      "/Users/michaelcallahan/turing_work/2mod/musical-eureka-1233/app/controllers/ingredients_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/michaelcallahan/turing_work/2mod/musical-eureka-1233/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/michaelcallahan/turing_work/2mod/musical-eureka-1233/app/controllers/recipes_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1684594980
+    "timestamp": 1684596569
   }
 }
