@@ -222,6 +222,8 @@
           null,
           null,
           null,
+          null,
+          1,
           null
         ]
       },
@@ -231,7 +233,7 @@
           null
         ]
       },
-      "/Users/jimmyjurado/Turing/2mod/ic/musical-eureka-1233/app/models/recipe.rb": {
+      "/Users/jimmyjurado/Turing/2mod/ic/musical-eureka-1233/app/models/ingredient.rb": {
         "lines": [
           1,
           1,
@@ -248,25 +250,22 @@
           null
         ]
       },
-      "/Users/jimmyjurado/Turing/2mod/ic/musical-eureka-1233/app/models/recipe_ingredient.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/jimmyjurado/Turing/2mod/ic/musical-eureka-1233/app/models/ingredient.rb": {
+      "/Users/jimmyjurado/Turing/2mod/ic/musical-eureka-1233/app/controllers/ingredients_controller.rb": {
         "lines": [
           1,
           1,
           null,
-          1,
+          null,
+          null
+        ]
+      },
+      "/Users/jimmyjurado/Turing/2mod/ic/musical-eureka-1233/app/controllers/application_controller.rb": {
+        "lines": [
           1,
           null
         ]
       }
     },
-    "timestamp": 1684607364
+    "timestamp": 1684608224
   }
 }
