@@ -17,7 +17,7 @@ RSpec.describe "Recipes show Page" do
 
       @rec2 = Recipe.create!(name: "Hotdog", complexity: 2, genre: "American")
       @ing2 = Ingredient.create!(name: "Salt", cost: 4)
-      @recing12 = RecipeIngredient.create!(recipe_id: @rec2.id, ingredient_id: @ing2.id)
+      @recing2 = RecipeIngredient.create!(recipe_id: @rec2.id, ingredient_id: @ing2.id)
 
       @rec3 = Recipe.create!(name: "Fried Rice", complexity: 6, genre: "Chinese")
     end
