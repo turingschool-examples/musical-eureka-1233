@@ -16,13 +16,16 @@ RSpec.describe "Ingredients Index Page" do
       @ing3 = Ingredient.create!(name: "Lettuce", cost: 8)
     end
 
-    it "displays a list of all the ingredients with name and cost" do
+    it "displays a list of all the ingredients in alphabetical with name and cost" do
       visit "/ingredients"
 
       expect(page).to have_content("Ground Beef: 2")
       expect(page).to have_content("Salt: 4")
       expect(page).to have_content("Lettuce: 8")
-      
+      save_and_open_page
+      expect(@ing1.name).to appear_before(@ing2.name)
+      expect(@ing3.name).to appear_before(@ing2.name)
+      expect(@ing1.name).to appear_before(@ing3.name)
 
     end
   end

@@ -51,7 +51,6 @@ RSpec.describe "Recipes show Page" do
     visit "/recipes/#{@rec1.id}"
 
     expect(page).to have_content("Total Cost: 6")
-
     end
   end
 end

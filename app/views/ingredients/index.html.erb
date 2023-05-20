@@ -1,5 +1,5 @@
 
-<% @ingredients.each do |ing| %>
+<% @ingredients.sorted.each do |ing| %>
 <p><%= ing.name %>: <%= ing.cost %></p>
 
 <% end %>
