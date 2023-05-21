@@ -19,6 +19,7 @@ RSpec.describe "/ingredients", type: :feature do
 
       expect(page).to have_content(@ingredient_3.name)
       expect(page).to have_content(@ingredient_3.cost)
+      save_and_open_page
     end
   end
 end
