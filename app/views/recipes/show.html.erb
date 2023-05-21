@@ -6,3 +6,10 @@
     <% end %>
 
 <h3>Total Cost: <%= @total_cost %> </h3>
+
+<%= form_with url: "/recipes/#{@recipe.id}", method: :patch, local: true do |form| %>
+  <%= form.label :add_ingredient, "Add Ingredient" %>
+  <%= form.text_field :add_ingredient %>
+  
+  <%= form.submit "Submit" %>
+<% end %>

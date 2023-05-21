@@ -4,4 +4,7 @@ class RecipesController < ApplicationController
     @ingredients = Ingredient.all
     @total_cost = @recipe.total_cost
   end
+
+  def update 
+  end
 end

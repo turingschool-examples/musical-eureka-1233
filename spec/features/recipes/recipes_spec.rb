@@ -26,4 +26,31 @@ RSpec.describe "the recipes show page" do
 
     expect(page).to have_content("Total Cost: 5")
   end
+  # Extension 2 - Add an Ingredient to a Recipe
+
+  # As a visitor
+  # When I visit '/recipes/:id'
+  # Then I see a form to add an ingredient to this recipe.
+  # When I fill in a field with an existing ingredient's ID,
+  # And I click submit,
+  # Then I am redirrected to the recipe's show page,
+  # And I see the new ingredient listed for this recipe.
+  it "has a form to add an ingredient to a recipe" do 
+    recipe1 = Recipe.create!(name: "Garlic Pasta", complexity: 2, genre: "Italian")
+    ingredient1 = Ingredient.create!(name: "Pasta", cost: 2)
+    ingredient2 = Ingredient.create!(name: "Garlic", cost: 3)
+
+    visit "/recipes/#{recipe1.id}"
+
+    expect(page).to_not have_content("Butter")
+    expect(page).to have_field("Add Ingredient")
+
+    ingredient3 = Ingredient.create!(name: "Butter", cost: 4)
+
+    fill_in "add_ingredient", with: "#{ingredient3.id}"
+    click_on "Submit"
+    visit "/recipes/#{recipe1.id}"
+
+    expect(page).to have_content("Butter")
+  end
 end
