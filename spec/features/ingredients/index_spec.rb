@@ -1,5 +1,5 @@
 require "rails_helper"
-RSpec.describe 'the ingredients index' do
+RSpec.describe 'the ingredients index', type: :feature do
 #   User Story 1 - Ingredients Index
   garlic = Ingredient.create!(name: "garlic", cost: 1)
   turkey = Ingredient.create!(name: "ground turkey", cost: 6)
@@ -11,7 +11,7 @@ RSpec.describe 'the ingredients index' do
 #      "Salt: 4")
   it 'lists all ingredients and their attributes' do
     visit '/ingredients'
-    save_and_open_page
+    # save_and_open_page
     expect(page).to have_content(garlic.name)
     expect(page).to have_content(garlic.cost)
     expect(page).to have_content(turkey.name)
@@ -20,4 +20,8 @@ RSpec.describe 'the ingredients index' do
     expect(page).to have_content(pasta.cost)
   end
 
+  it 'lists all ingredients in alpha order' do
+    visit '/ingredients'
+    expect(Ingredient.order_by_name.to_a).to eq([garlic, turkey, pasta])
+  end
 end
