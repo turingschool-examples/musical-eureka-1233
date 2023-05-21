@@ -13,14 +13,16 @@ RSpec.describe Ingredient, type: :model do
    end
 
    describe "order_by_name" do
-      it "displays ingredients in alpha order" do
-         garlic = Ingredient.create!(name: "garlic", cost: 1)
-         turkey = Ingredient.create!(name: "ground turkey", cost: 6)
-         pasta = Ingredient.create!(name: "penne", cost: 3)
-      
+      before(:each) do
+         @garlic = Ingredient.create!(name: "garlic", cost: 1)
+         @turkey = Ingredient.create!(name: "ground turkey", cost: 6)
+         @pasta = Ingredient.create!(name: "penne", cost: 3)
+      end
+
+      it 'displays ingredients in alpha order' do
          ingredients = Ingredient.order_by_name
 
-         expect(ingredients.pluck(:id)).to eq([garlic.id, turkey.id, pasta.id])
+         expect(ingredients.pluck(:name)).to eq([@garlic.name, @turkey.name, @pasta.name])
       end
    end
 
