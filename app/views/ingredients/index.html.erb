@@ -1,0 +1,8 @@
+<h1> Ingredient Index Page </h1>
+
+<section id="ingredient_info">
+  <% @ingredients.each do |ingredient| %>
+    <p> Name: <%= ingredient.name %></p>
+    <p> Cost:$ <%= ingredient.cost %>
+  <% end %>
+</section>
