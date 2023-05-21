@@ -222,6 +222,7 @@
           null,
           null,
           null,
+          1,
           null
         ]
       },
@@ -263,8 +264,23 @@
           1,
           null
         ]
+      },
+      "/Users/amyspears/turing_work/second_mod/ics/musical-eureka-1233/app/controllers/ingredients_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/amyspears/turing_work/second_mod/ics/musical-eureka-1233/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1684689960
+    "timestamp": 1684690620
   }
 }
