@@ -44,8 +44,9 @@ RSpec.describe 'recipes show page', type: :feature do
     it 'displays name, complexity, genre, ingredients' do 
       visit "/recipes/#{@spaghetti.id}"
       expect(page).to have_content(@spaghetti.name)
-      expect(page).to have_content(@spaghetti.complexity)
-      expect(page).to have_content(@spaghetti.genre)
+      expect(page).to have_content("Complexity: #{@spaghetti.complexity}")
+      expect(page).to have_content("Genre: #{@spaghetti.genre}")
+      expect(page).to have_content("Ingredients:")
       expect(page).to have_content(@tomatoes.name)
       expect(page).to have_content(@garlic.name)
       expect(page).to have_content(@onion.name)
