@@ -1,3 +1,4 @@
 <% @ingredients.each do |ingredient| %>
 <p><%= ingredient.name %>: <%= ingredient.cost %></p>
 <% end %>
+<%= link_to 'Sort Ingredients Alphabetically', "/ingredients?sort=yeahbaby" %>
