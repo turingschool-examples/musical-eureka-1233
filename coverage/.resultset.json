@@ -231,8 +231,30 @@
           null
         ]
       },
+      "/Users/laurengolden/turing_work/2mod/independent_challenges/musical-eureka-1233/spec/models/ingredient_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/laurengolden/turing_work/2mod/independent_challenges/musical-eureka-1233/app/models/ingredient.rb": {
         "lines": [
+          1,
+          1,
+          null,
           1,
           1,
           null
@@ -261,7 +283,8 @@
       "/Users/laurengolden/turing_work/2mod/independent_challenges/musical-eureka-1233/app/models/recipe_ingredient.rb": {
         "lines": [
           1,
-          null,
+          1,
+          1,
           null
         ]
       },
@@ -288,10 +311,13 @@
         "lines": [
           1,
           1,
+          null,
+          1,
+          1,
           null
         ]
       }
     },
-    "timestamp": 1684684640
+    "timestamp": 1684686544
   }
 }
