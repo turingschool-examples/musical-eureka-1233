@@ -224,12 +224,36 @@
           null,
           1,
           null,
+          1,
+          null,
           null
         ]
       },
       "/Users/laurengolden/turing_work/2mod/independent_challenges/musical-eureka-1233/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/laurengolden/turing_work/2mod/independent_challenges/musical-eureka-1233/spec/features/recipes/recipes_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
           null
         ]
       },
@@ -334,8 +358,17 @@
           1,
           null
         ]
+      },
+      "/Users/laurengolden/turing_work/2mod/independent_challenges/musical-eureka-1233/app/controllers/recipes_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1684687362
+    "timestamp": 1684688108
   }
 }

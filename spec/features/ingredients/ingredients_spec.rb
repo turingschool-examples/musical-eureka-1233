@@ -7,7 +7,7 @@ RSpec.describe "the ingredients index" do
     ingredient2 = Ingredient.create!(name: "Garlic", cost: 3)
 
     visit "/ingredients"
-save_and_open_page
+
     expect(page).to have_content(ingredient1.name)
     expect(page).to have_content(ingredient1.cost)
     expect(page).to have_content(ingredient2.name)
