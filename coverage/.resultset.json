@@ -235,6 +235,8 @@
         "lines": [
           1,
           1,
+          1,
+          1,
           null
         ]
       },
@@ -261,7 +263,8 @@
       "/Users/amyspears/turing_work/second_mod/ics/musical-eureka-1233/app/models/recipe_ingredient.rb": {
         "lines": [
           1,
-          null,
+          1,
+          1,
           null
         ]
       },
@@ -288,10 +291,12 @@
         "lines": [
           1,
           1,
+          1,
+          1,
           null
         ]
       }
     },
-    "timestamp": 1684687578
+    "timestamp": 1684688132
   }
 }
