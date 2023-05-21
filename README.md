@@ -52,13 +52,13 @@ Ingredients will have a name and a cost stored as an integer.
 ### User Stories
  
 ```
-User Story 1 - Ingredients Index
+<!-- User Story 1 - Ingredients Index
 
 As a visitor,
 When I visit '/ingredients'
 I see a list of all the ingredients including their name and cost
 (e.g. "Ground Beef: 2"
-     "Salt: 4")
+     "Salt: 4") -->
 ```
  
 ```

@@ -1,9 +1,9 @@
 require "rails_helper"
 RSpec.describe 'the ingredients index' do
 #   User Story 1 - Ingredients Index
-  garlic = Ingredient.create(name: "garlic", cost: 1)
-  turkey = Ingredient.create(name: "ground turkey", cost: 6)
-  pasta = Ingredient.create(name: "penne", cost: 3)
+  garlic = Ingredient.create!(name: "garlic", cost: 1)
+  turkey = Ingredient.create!(name: "ground turkey", cost: 6)
+  pasta = Ingredient.create!(name: "penne", cost: 3)
 # As a visitor,
 # When I visit '/ingredients'
 # I see a list of all the ingredients including their name and cost
