@@ -1,9 +1,4 @@
 require 'rails_helper' 
-# As a visitor,
-# When I visit '/ingredients'
-# I see a list of all the ingredients including their name and cost
-# (e.g. "Ground Beef: 2"
-#      "Salt: 4")
 
 RSpec.describe 'Ingredients index' do 
   before :each do 
