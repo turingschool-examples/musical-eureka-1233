@@ -222,6 +222,8 @@
           null,
           null,
           null,
+          1,
+          null,
           null
         ]
       },
@@ -316,8 +318,24 @@
           1,
           null
         ]
+      },
+      "/Users/laurengolden/turing_work/2mod/independent_challenges/musical-eureka-1233/app/controllers/ingredients_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/laurengolden/turing_work/2mod/independent_challenges/musical-eureka-1233/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1684686544
+    "timestamp": 1684687362
   }
 }
