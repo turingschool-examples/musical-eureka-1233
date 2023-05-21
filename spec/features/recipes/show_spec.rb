@@ -59,5 +59,35 @@ RSpec.describe "/recipes/:id", type: :feature do
       expect(page).not_to have_content(rec_ing_1.ingredient.name)
       expect(page).not_to have_content(rec_ing_2.ingredient.id)
     end
+
+     # User Story 3 - Total Cost
+
+    # As a visitor,
+    # When I visit '/recipes/:id'
+    # I see the total cost of all of the ingredients in the recipe.
+    # (e.g. "Total Cost: 22")
+
+    it "displays the total cost of all the ingredients in the recipe" do
+      recipe_1 = Recipe.create!(name: "Ground Beef and Salt", complexity: 4, genre: "Impressive")
+      recipe_2 = Recipe.create!(name: "Penut Butter", complexity: 5, genre: "Wicked Impressive")
+
+      beef = Ingredient.create!(name: "Ground Beef", cost: 2)
+      salt = Ingredient.create!(name: "Salt", cost: 20)
+      penuts = Ingredient.create!(name: "Penut", cost: 7)
+
+
+      rec_ing_1 = RecipeIngredient.create!(recipe_id: recipe_1.id, ingredient_id: beef.id)
+      rec_ing_2 = RecipeIngredient.create!(recipe_id: recipe_1.id, ingredient_id: salt.id)
+
+      rec_ing_3 = RecipeIngredient.create!(recipe_id: recipe_2.id, ingredient_id: penuts.id)
+      rec_ing_4 = RecipeIngredient.create!(recipe_id: recipe_2.id, ingredient_id: salt.id)
+
+      visit "/recipes/#{recipe_1.id}"
+      expect(page).to have_content("Total Cost: 22")
+
+      visit "/recipes/#{recipe_2.id}"
+      expect(page).to have_content("Total Cost: 27")
+    end
+
   end
 end

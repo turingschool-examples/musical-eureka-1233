@@ -9,4 +9,5 @@
     <% @recipe.ingredients.each do |ingredient| %>
       <li><%= ingredient.name %> </li>
     <% end %>
+    <p> Total Cost: <%= @recipe.ingredients.calculate_cost %></p>
   </ul>
