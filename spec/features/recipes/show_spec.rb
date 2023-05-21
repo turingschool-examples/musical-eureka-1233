@@ -32,6 +32,17 @@ RSpec.describe "/recipes/:id Show Page" do
   end
 
   it "displays a list of the names of hte ingredients for the recipe" do
+    visit "/recipes/#{@recipe_1.id}"
 
+    expect(page).to have_content("Ingredients:")
+    expect(page).to have_content(@ingredient_1.name)
+    expect(page).to have_content(@ingredient_2.name)
+    expect(page).to have_content(@ingredient_3.name)
+
+    visit "/recipes/#{@recipe_2.id}"
+
+    expect(page).to have_content(@ingredient_1.name)
+    expect(page).to have_content(@ingredient_2.name)
+    expect(page).to_not have_content(@ingredient_3.name)
   end
 end
