@@ -234,12 +234,17 @@
           null
         ]
       },
-      "/Users/amyspears/turing_work/second_mod/ics/musical-eureka-1233/app/models/ingredient.rb": {
+      "/Users/amyspears/turing_work/second_mod/ics/musical-eureka-1233/app/models/recipe.rb": {
         "lines": [
           1,
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          3,
+          null,
           null
         ]
       },
@@ -250,7 +255,7 @@
           null
         ]
       },
-      "/Users/amyspears/turing_work/second_mod/ics/musical-eureka-1233/app/models/recipe.rb": {
+      "/Users/amyspears/turing_work/second_mod/ics/musical-eureka-1233/app/models/ingredient.rb": {
         "lines": [
           1,
           1,
@@ -266,24 +271,8 @@
           1,
           null
         ]
-      },
-      "/Users/amyspears/turing_work/second_mod/ics/musical-eureka-1233/app/controllers/recipes_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/amyspears/turing_work/second_mod/ics/musical-eureka-1233/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1684693468
+    "timestamp": 1684694518
   }
 }
