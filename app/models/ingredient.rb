@@ -3,4 +3,13 @@ class Ingredient < ApplicationRecord
 
    has_many :recipe_ingredients
    has_many :recipes, through: :recipe_ingredients
+
+   def self.total_cost
+      @all_ingredients = Ingredient.all
+      @ingredients_cost = []
+      @all_ingredients.each do |ingredient|
+         @ingredients_cost << ingredient.cost
+      end
+      @total_cost = @ingredients_cost.sum
+   end
 end
