@@ -222,6 +222,7 @@
           null,
           null,
           null,
+          1,
           null
         ]
       },
@@ -231,7 +232,7 @@
           null
         ]
       },
-      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/models/recipe.rb": {
+      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/models/ingredient.rb": {
         "lines": [
           1,
           1,
@@ -247,24 +248,26 @@
           null
         ]
       },
-      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/models/recipe_ingredient.rb": {
+      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/controllers/ingredients_controller.rb": {
         "lines": [
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          null,
+          null,
           null
         ]
       },
-      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/models/ingredient.rb": {
+      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/controllers/application_controller.rb": {
         "lines": [
-          1,
-          1,
-          1,
           1,
           null
         ]
       }
     },
-    "timestamp": 1684674467
+    "timestamp": 1684675624
   }
 }
