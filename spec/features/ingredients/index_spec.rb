@@ -1,8 +1,3 @@
-# As a visitor,
-# When I visit '/ingredients'
-# I see a list of all the ingredients including their name and cost
-# (e.g. "Ground Beef: 2"
-#      "Salt: 4")
 require "rails_helper"
 
 RSpec.describe "/ingredients", type: :feature do
@@ -24,7 +19,6 @@ RSpec.describe "/ingredients", type: :feature do
 
       expect(page).to have_content(@ingredient_3.name)
       expect(page).to have_content(@ingredient_3.cost)
-save_and_open_page
     end
   end
 end
