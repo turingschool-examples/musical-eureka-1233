@@ -1,4 +1,3 @@
-<%= @ingredients.each do |ingredient| %>
-<%= ingredient.name %>
-<%= ingredient.cost %>
+<% @ingredients.each do |ingredient| %>
+<p><%= ingredient.name %>: <%= ingredient.cost %></p>
 <% end %>
