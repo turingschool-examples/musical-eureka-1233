@@ -20,7 +20,11 @@ RSpec.describe 'Ingredient Index', type: :feature do
   describe "visit '/ingredients" do
     it "I see a list of all the ingredients including their name and cost" do
       visit "/ingredients"
-      save_and_open_page
+      # save_and_open_page
+      within("h1")do
+        expect(page).to have_content("Ingredient Index Page")
+      end
+
       within("#ingredient_info") do
       expect(page).to have_content(chicken.name)
       expect(page).to have_content(ravioli.name)

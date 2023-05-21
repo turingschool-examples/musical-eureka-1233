@@ -1,0 +1,18 @@
+<h1> Recipe Show Page </h1>
+
+<section id="recipe_attributes-<%= @recipe.id %>">
+  <h3><%= @recipe.name %></h3>
+    <ul>
+      <li>Complexity Scale: <%=@recipe.complexity  %>
+      <li>Genre: <%=@recipe.genre  %>
+    </ul>
+</section>
+
+<section class="ingredients-<%= @recipe.id %>">
+<h4> Ingredient List </h4>
+  <ol>
+    <% @recipe.ingredients.each do |ingredient| %>
+      <li><%= ingredient.name %></li>
+    <% end %>
+  </ol>
+</section>

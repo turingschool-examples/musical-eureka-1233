@@ -7,7 +7,7 @@ RSpec.describe 'Recipe Show', type: :feature do
   let!(:sauce) {Ingredient.create!(name: "Marinara", cost:3)}
   let!(:bread_crumbs) {Ingredient.create!(name: "Bread Crumbs", cost:1)}
 
-  let!(:pasta_dish) {Recipe.create(name: "Pasta with sauce", complexity: 2, genre: "Italian")}
+  let!(:pasta_dish) {Recipe.create(name: "Pasta with Sauce", complexity: 2, genre: "Italian")}
   let!(:mac_n_cheese) {Recipe.create(name: "macaroni and cheese", complexity: 3, genre: "American")}
   let!(:chicken_fingers) {Recipe.create(name: "Chicken Fingers", complexity: 2, genre: "Kids Food")}
 
@@ -20,15 +20,25 @@ RSpec.describe 'Recipe Show', type: :feature do
   describe "visit '/recipes/:id" do
     it "I see the recipe's name, complexity and genre, and I see a list of the names of the ingredients for the recipe." do
       visit "/recipes/#{pasta_dish.id}"
+save_and_open_page
+      within("h1")do
+        expect(page).to have_content("Recipe Show Page")
+      end
 
-      # within("#recipes-#{pasta_dish.id}")
+       within("#recipe_attributes-#{pasta_dish.id}") do
         expect(page).to have_content(pasta_dish.name)
         expect(page).to have_content(pasta_dish.complexity)
         expect(page).to have_content(pasta_dish.genre)
 
         expect(page).to_not have_content(mac_n_cheese.name)
         expect(page).to_not have_content(chicken_fingers.name)
-        # end
+        end
+
+        within(".ingredients-#{pasta_dish.id}") do
+          expect(page).to have_content(chicken.name)
+          expect(page).to have_content(ravioli.name)
+          expect(page).to have_content(sauce.name)
+        end
       end
     end
   end
