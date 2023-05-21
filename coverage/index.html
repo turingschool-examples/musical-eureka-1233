@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-21T12:20:05-06:00">2023-05-21T12:20:05-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-21T12:20:45-06:00">2023-05-21T12:20:45-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>129</b> relevant lines,
-    <span class="green"><b>129</b> lines covered</span> and
+    <b>128</b> relevant lines,
+    <span class="green"><b>128</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -271,9 +271,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#037d5719a19d0f08e5455f6393cb3f9de4358420" class="src_link" title="spec/features/recipes/recipes_spec.rb">spec/features/recipes/recipes_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">57</td>
-            <td class="cell--number">31</td>
-            <td class="cell--number">31</td>
+            <td class="cell--number">49</td>
+            <td class="cell--number">30</td>
+            <td class="cell--number">30</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -3519,8 +3519,8 @@
     
 
     <div class="t-line-summary">
-      <b>31</b> relevant lines.
-      <span class="green"><b>31</b> lines covered</span> and
+      <b>30</b> relevant lines.
+      <span class="green"><b>30</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3846,7 +3846,7 @@
 
             
 
-            <code class="ruby">  # Extension 2 - Add an Ingredient to a Recipe</code>
+            <code class="ruby">  </code>
           </li>
         </div>
       
@@ -3857,89 +3857,12 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # Extension 2 - Add an Ingredient to a Recipe</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">  # As a visitor</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
-            
-
-            <code class="ruby">  # When I visit &#39;/recipes/:id&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="33">
-            
-            
-
-            
-
-            <code class="ruby">  # Then I see a form to add an ingredient to this recipe.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
-            
-
-            <code class="ruby">  # When I fill in a field with an existing ingredient&#39;s ID,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="35">
-            
-            
-
-            
-
-            <code class="ruby">  # And I click submit,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="36">
-            
-            
-
-            
-
-            <code class="ruby">  # Then I am redirrected to the recipe&#39;s show page,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="37">
-            
-            
-
-            
-
-            <code class="ruby">  # And I see the new ingredient listed for this recipe.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="38">
+          <li class="covered" data-hits="1" data-linenumber="31">
             <span class="hits">1</span>
             
 
@@ -3950,7 +3873,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
+          <li class="covered" data-hits="1" data-linenumber="32">
             <span class="hits">1</span>
             
 
@@ -3961,7 +3884,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
+          <li class="covered" data-hits="1" data-linenumber="33">
             <span class="hits">1</span>
             
 
@@ -3972,13 +3895,90 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
+          <li class="covered" data-hits="1" data-linenumber="34">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">    ingredient2 = Ingredient.create!(name: &quot;Garlic&quot;, cost: 3)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="36">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit &quot;/recipes/#{recipe1.id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to_not have_content(&quot;Butter&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_field(&quot;Add Ingredient&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="41">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    ingredient3 = Ingredient.create!(name: &quot;Butter&quot;, cost: 4)</code>
           </li>
         </div>
       
@@ -4000,89 +4000,12 @@
 
             
 
-            <code class="ruby">    visit &quot;/recipes/#{recipe1.id}&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="44">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="45">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(page).to_not have_content(&quot;Butter&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(page).to have_field(&quot;Add Ingredient&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="47">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="48">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    ingredient3 = Ingredient.create!(name: &quot;Butter&quot;, cost: 4)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="49">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="50">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">    fill_in &quot;add_ingredient&quot;, with: &quot;#{ingredient3.id}&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
+          <li class="covered" data-hits="1" data-linenumber="44">
             <span class="hits">1</span>
             
 
@@ -4093,7 +4016,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="52">
+          <li class="covered" data-hits="1" data-linenumber="45">
             <span class="hits">1</span>
             
 
@@ -4104,7 +4027,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
@@ -4115,7 +4038,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
+          <li class="covered" data-hits="1" data-linenumber="47">
             <span class="hits">1</span>
             
 
@@ -4126,18 +4049,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="55">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">save_and_open_page</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 
@@ -4148,7 +4060,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
