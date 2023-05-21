@@ -31,5 +31,15 @@ RSpec.describe "/recipes/:id", type: :feature do
       expect(page).to have_content("Total Cost: $")
       expect(page).to have_content(9)
     end
+    
+    xit "displays a form to add an ingredient" do
+      fill_in(:name, with: "Flour")
+      fill_in(:cost, with: 1)
+      click_on("Submit")
+
+      expect(current_path).to eq("/recipes/#{@recipe_1.id}")
+      expect(page).to have_content("Flour")
+      expect(page).to have_content(1)
+    end
   end
 end
