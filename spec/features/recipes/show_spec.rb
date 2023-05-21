@@ -44,12 +44,26 @@ RSpec.describe 'Recipe Show', type: :feature do
     describe "Total cost of Ingredients" do
       it "I see the total cost of all of the ingredients in the recipe." do
         visit "/recipes/#{pasta_dish.id}"
-save_and_open_page
 
-        within(".ingredients-#{pasta_dish.id}") do
-          expect(page).to have_content("Total Cost: 15")
-          end
+      within(".ingredients-#{pasta_dish.id}") do
+        expect(page).to have_content("Total Cost: 15")
         end
       end
     end
+
+    describe "EXT2 Add an Ingredient to a Recipe" do
+      it "I see a form to add an ingredient to this recipe.
+      When I fill in a field with an existing ingredient's ID, I click submit, Then I am redirrected to the recipe's show page, And I see the new ingredient listed for this recipe." do
+      visit "/recipes/#{pasta_dish.id}"
+# save_and_open_page
+      # within("#add_ingredient-#{pasta_dish.id}") do
+        fill_in "Ingredient ID", with: "#{cheese.id}"
+        click_on "Submit"
+
+        expect(current_path).to eq("/recipes/#{pasta_dish.id}")
+        expect(page).to have_content(cheese.name)
+        # end
+      end
+    end
   end
+end
