@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Ingredient Index', type: :feature do
+RSpec.describe 'Recipe Show', type: :feature do
   let!(:chicken) {Ingredient.create!(name: "Chicken", cost: 10)}
   let!(:ravioli) {Ingredient.create!(name: "Ravioli", cost: 2)}
   let!(:cheese) {Ingredient.create!(name: "Parmesan", cost:5)}
@@ -17,18 +17,18 @@ RSpec.describe 'Ingredient Index', type: :feature do
   let!(:chicken_chicken_fingers) {RecipeIngredient.create!(ingredient_id: chicken.id, recipe_id: chicken_fingers.id)}
   let!(:bread_crumbs_chicken_fingers) {RecipeIngredient.create!(ingredient_id: bread_crumbs.id, recipe_id: chicken_fingers.id)}
 
-  describe "visit '/ingredients" do
-    it "I see a list of all the ingredients including their name and cost" do
-      visit "/ingredients"
-      save_and_open_page
-      within("#ingredient_info") do
-      expect(page).to have_content(chicken.name)
-      expect(page).to have_content(ravioli.name)
-      expect(page).to have_content(sauce.name)
-      expect(page).to have_content(chicken.cost)
-      expect(page).to have_content(bread_crumbs.cost)
-      expect(page).to have_content(cheese.cost)
+  describe "visit '/recipes/:id" do
+    it "I see the recipe's name, complexity and genre, and I see a list of the names of the ingredients for the recipe." do
+      visit "/recipes/#{pasta_dish.id}"
+
+      # within("#recipes-#{pasta_dish.id}")
+        expect(page).to have_content(pasta_dish.name)
+        expect(page).to have_content(pasta_dish.complexity)
+        expect(page).to have_content(pasta_dish.genre)
+
+        expect(page).to_not have_content(mac_n_cheese.name)
+        expect(page).to_not have_content(chicken_fingers.name)
+        # end
       end
     end
   end
-end
