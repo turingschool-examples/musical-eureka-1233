@@ -1,3 +1,5 @@
+
+<img width="874" alt="Screenshot 2023-05-21 at 9 22 22 AM" src="https://github.com/kbergstrom78/musical-eureka-1233/assets/124642113/be3d1f50-4632-428c-8d1a-d62d909b7525">
 # Hells Kitchen
 
 This repository requires and has been tested on Ruby v3.1.1 and is based on Rails 7.0.4.
