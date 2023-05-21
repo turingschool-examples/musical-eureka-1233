@@ -234,7 +234,7 @@
           null
         ]
       },
-      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/models/recipe.rb": {
+      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/models/ingredient.rb": {
         "lines": [
           1,
           1,
@@ -250,6 +250,19 @@
           null
         ]
       },
+      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/spec/models/recipe_ingredients_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/models/recipe_ingredient.rb": {
         "lines": [
           1,
@@ -258,37 +271,52 @@
           null
         ]
       },
-      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/models/ingredient.rb": {
+      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/spec/models/recipe_spec.rb": {
         "lines": [
           1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          2,
+          2,
+          2,
+          null,
           1,
           1,
-          1,
+          null,
+          null,
           null
         ]
       },
-      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/controllers/recipes_controller.rb": {
+      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/models/recipe.rb": {
         "lines": [
           1,
           1,
           1,
           1,
           null,
+          1,
+          1,
           null,
-          1,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/kimbergstrom/Turing/2mod/ind_challenge/musical-eureka-1233/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
           null
         ]
       }
     },
-    "timestamp": 1684677877
+    "timestamp": 1684679120
   }
 }
