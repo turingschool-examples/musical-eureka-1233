@@ -20,7 +20,7 @@ RSpec.describe Ingredient, type: :model do
       
          ingredients = Ingredient.order_by_name
 
-         expect(ingredients).to eq([garlic, turkey, pasta])
+         expect(ingredients.pluck(:id)).to eq([garlic.id, turkey.id, pasta.id])
       end
    end
 
