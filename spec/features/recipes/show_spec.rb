@@ -18,9 +18,9 @@ RSpec.describe 'Recipe Show', type: :feature do
   let!(:bread_crumbs_chicken_fingers) {RecipeIngredient.create!(ingredient_id: bread_crumbs.id, recipe_id: chicken_fingers.id)}
 
   describe "visit '/recipes/:id" do
-    it "I see the recipe's name, complexity and genre, and I see a list of the names of the ingredients for the recipe." do
+    it "US2 I see the recipe's name, complexity and genre, and I see a list of the names of the ingredients for the recipe." do
       visit "/recipes/#{pasta_dish.id}"
-save_and_open_page
+
       within("h1")do
         expect(page).to have_content("Recipe Show Page")
       end
@@ -38,6 +38,14 @@ save_and_open_page
           expect(page).to have_content(chicken.name)
           expect(page).to have_content(ravioli.name)
           expect(page).to have_content(sauce.name)
+        end
+      end
+
+    describe "Total cost of Ingredients" do
+      it "I see the total cost of all of the ingredients in the recipe." do
+        visit "/recipes/#{pasta_dish.id}"
+
+        expect(page).to have_content(15)
         end
       end
     end
