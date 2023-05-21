@@ -1,4 +1,5 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
+START TIME: 9:55AM - END TIME 12:55PM
 require 'spec_helper'
 require 'simplecov'
 SimpleCov.start 
