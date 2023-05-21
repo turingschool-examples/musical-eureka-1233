@@ -35,7 +35,7 @@ RSpec.describe "/recipes/:id, recipe show page", type: :feature do
 
     it "shows the total cost of all ingredients for the recipe" do
       visit "/recipes/#{@recipe1.id}"
-      save_and_open_page
+
       expect(page).to have_content("Total Cost: 8")
     end
   end
