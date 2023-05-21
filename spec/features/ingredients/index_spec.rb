@@ -19,6 +19,12 @@ RSpec.describe "/ingredients", type: :feature do
 
       expect(page).to have_content(@ingredient_3.name)
       expect(page).to have_content(@ingredient_3.cost)
+      save_and_open_page
+    end
+
+    it "will display ingredients alphabetically by name" do
+      expect(@ingredient_3.name).to appear_before(@ingredient_1.name)
+      expect(@ingredient_1.name).to appear_before(@ingredient_2.name)
     end
   end
 end
