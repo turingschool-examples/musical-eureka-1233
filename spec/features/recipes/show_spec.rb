@@ -22,6 +22,9 @@ RSpec.describe "/recipe:id", type: :feature do
     expect(page).to have_content(recipe_1.name)
     expect(page).to have_content(recipe_1.complexity)
     expect(page).to have_content(recipe_1.genre)
+    expect(page).to have_content("garlic")
+    expect(page).to have_content("ground turkey")
+    expect(page).to have_content("penne")
     end
   end
 end
