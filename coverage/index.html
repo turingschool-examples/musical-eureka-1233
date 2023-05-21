@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-21T12:49:50-06:00">2023-05-21T12:49:50-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-05-21T13:04:20-06:00">2023-05-21T13:04:20-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  100.0%
+  98.44%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         1.05
+       <span class="yellow">
+         1.0
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>65</b> relevant lines,
-    <span class="green"><b>65</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed. </span>
+    <b>64</b> relevant lines,
+    <span class="green"><b>63</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
-  100.0%
+  98.44%
 </span>
 )
   </div>
@@ -82,13 +82,13 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#d5213f102e317c9e9dbaa19b180b03d2f18a7e89" class="src_link" title="app/controllers/recipes_controller.rb">app/controllers/recipes_controller.rb</a></td>
+            <td class="strong t-file__name"><a href="#98c6348ec94207e94a6f212754cef7dfc1624483" class="src_link" title="app/controllers/ingredients_controller.rb">app/controllers/ingredients_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">4</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">3</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.50</td>
+            <td class="cell--number">1.33</td>
             
           </tr>
         
@@ -127,12 +127,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#838f11e85666348b519671bff204e9fb874a04d2" class="src_link" title="app/models/recipe.rb">app/models/recipe.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="yellow strong cell--number t-file__coverage">83.33 %</td>
             <td class="cell--number">10</td>
             <td class="cell--number">6</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.17</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0.83</td>
             
           </tr>
         
@@ -327,9 +327,9 @@
 </div>
 
       
-        <div class="source_table" id="d5213f102e317c9e9dbaa19b180b03d2f18a7e89">
+        <div class="source_table" id="98c6348ec94207e94a6f212754cef7dfc1624483">
   <div class="header">
-    <h3>app/controllers/recipes_controller.rb</h3>
+    <h3>app/controllers/ingredients_controller.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -341,8 +341,8 @@
     
 
     <div class="t-line-summary">
-      <b>4</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
+      <b>3</b> relevant lines.
+      <span class="green"><b>3</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -360,7 +360,7 @@
 
             
 
-            <code class="ruby">class RecipesController &lt;ApplicationController</code>
+            <code class="ruby">class IngredientsController &lt; ApplicationController</code>
           </li>
         </div>
       
@@ -371,7 +371,7 @@
 
             
 
-            <code class="ruby">  def show</code>
+            <code class="ruby">  def index</code>
           </li>
         </div>
       
@@ -382,23 +382,12 @@
 
             
 
-            <code class="ruby">    @recipe = Recipe.find(params[:id])</code>
+            <code class="ruby">    @ingredients = Ingredient.all</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="4">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    @recipe_cost = Recipe.find(params[:id]).total_cost</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="never" data-hits="" data-linenumber="4">
             
             
 
@@ -409,7 +398,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="5">
             
             
 
@@ -631,8 +620,8 @@
   <div class="header">
     <h3>app/models/recipe.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="yellow">
+  83.33%
 </span>
 
       lines covered
@@ -642,8 +631,8 @@
 
     <div class="t-line-summary">
       <b>6</b> relevant lines.
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
 
     
@@ -731,8 +720,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="8">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="8">
+            
             
 
             
