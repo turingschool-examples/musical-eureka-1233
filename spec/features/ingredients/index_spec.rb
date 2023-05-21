@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Ingredients index' do  
   describe 'index testing' do 
     before :each do 
-      @brisket = Ingredient.create!(name: "Bison Brisket", cost: 25)
-      @potatoes = Ingredient.create!(name: "Potatoes", cost: 4)
+      @brisket = Ingredient.create!(name: "bison brisket", cost: 25)
+      @potatoes = Ingredient.create!(name: "potatoes", cost: 4)
     end
 
     it 'lists all the ingredients including name and cost' do 
@@ -19,18 +19,18 @@ RSpec.describe 'Ingredients index' do
       tomatoes = Ingredient.create!(name: 'tomatoes', cost: 10)
       visit '/ingredients' 
 
-      expect(@brisket).to appear_before(@potatoes)
-      expect(@potatoes).to appear_before(fatback)
-      expect(fatback).to appear_before(pintos)
-      expect(pintos).to appear_before(tomatoes)
+      expect(@brisket.name).to appear_before(@potatoes.name)
+      expect(@potatoes.name).to appear_before(fatback.name)
+      expect(fatback.name).to appear_before(pintos.name)
+      expect(pintos.name).to appear_before(tomatoes.name)
 
       expect(page).to have_link('Sort Ingredients Alphabetically')
       click_on 'Sort Ingredients Alphabetically'
 
-      expect(@brisket).to appear_before(fatback)
-      expect(pintos).to appear_before(@ingredient_2)
-      expect(@ingredient_2).to appear_before(tomatoes)
-      expect(tomatoes).to_not appear_before(@ingredient_2)
+      expect(@brisket.name).to appear_before(fatback.name)
+      expect(pintos.name).to appear_before(@potatoes.name)
+      expect(@potatoes.name).to appear_before(tomatoes.name)
+      expect(tomatoes.name).to_not appear_before(@potatoes.name)
     end
   end
 end
