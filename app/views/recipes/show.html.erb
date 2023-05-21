@@ -17,3 +17,9 @@
   </ol>
 <p> Total Cost: <%= @recipe_cost %>
 </section>
+
+<%= form_with url: "/recipes/#{@recipe.id}", method: :post, local: true do |form| %>
+  <%= form.label :ingredient %>
+  <%= form.text_field :ingredient %>
+  <%= form.submit 'Submit' %>
+<% end %>

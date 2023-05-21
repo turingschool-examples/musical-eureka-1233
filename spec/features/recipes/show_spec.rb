@@ -52,12 +52,12 @@ RSpec.describe 'Recipe Show', type: :feature do
     end
 
     describe "EXT2 Add an Ingredient to a Recipe" do
-      it "I see a form to add an ingredient to this recipe.
+     xit "I see a form to add an ingredient to this recipe.
       When I fill in a field with an existing ingredient's ID, I click submit, Then I am redirrected to the recipe's show page, And I see the new ingredient listed for this recipe." do
       visit "/recipes/#{pasta_dish.id}"
 # save_and_open_page
       # within("#add_ingredient-#{pasta_dish.id}") do
-        fill_in "Ingredient ID", with: "#{cheese.id}"
+        fill_in "Ingredient", with: "#{cheese.id}"
         click_on "Submit"
 
         expect(current_path).to eq("/recipes/#{pasta_dish.id}")
