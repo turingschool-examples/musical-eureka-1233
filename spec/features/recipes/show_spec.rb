@@ -19,7 +19,6 @@ RSpec.describe "/recipes/:id, recipe show page", type: :feature do
     it "should see the specific recipe and it's attributes and ingredients needed" do
       visit "/recipes/#{@recipe1.id}"
 
-      save_and_open_page
       
       expect(page).to have_content("Name: #{@recipe1.name}")
       expect(page).to have_content("Complexity: #{@recipe1.complexity}")
@@ -32,6 +31,12 @@ RSpec.describe "/recipes/:id, recipe show page", type: :feature do
 
       expect(page).to_not have_content(@recipe2.name)
       expect(page).to_not have_content(@ingredient2.name)
+    end
+
+    it "shows the total cost of all ingredients for the recipe" do
+      visit "/recipes/#{@recipe1.id}"
+      save_and_open_page
+      expect(page).to have_content("Total Cost: 8")
     end
   end
 end
