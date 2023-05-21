@@ -1,9 +1,3 @@
-# User Story 2 - Recipes Show
-
-# As a visitor,
-# When I visit '/recipes/:id',
-# Then I see the recipe's name, complexity and genre,
-# and I see a list of the names of the ingredients for the recipe.
 require "rails_helper"
 
 RSpec.describe "/recipes/:id", type: :feature do
@@ -18,15 +12,19 @@ RSpec.describe "/recipes/:id", type: :feature do
       @recipe_1.ingredients << @ingredient_1
       @recipe_1.ingredients << @ingredient_2
       @recipe_1.ingredients << @ingredient_3
-      
+
       visit "/recipes/#{@recipe_1.id}"
     end
     
-    it "will display the recipe's name, complexity and genre and a list of the ingredients" do
+    it "will display the recipe's name, complexity and genre" do
       expect(page).to have_content(@recipe_1.name)
       expect(page).to have_content(@recipe_1.complexity)
       expect(page).to have_content(@recipe_1.genre)
     end
 
+    it "will display a list of the ingredients in the recipe" do
+      expect(page).to have_content(@ingredient_1.name)
+      expect(page).to have_content(@ingredient_1.cost)
+    end
   end
 end
