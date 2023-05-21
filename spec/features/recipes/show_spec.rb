@@ -52,5 +52,10 @@ RSpec.describe 'recipes show page', type: :feature do
       expect(page).to have_content(@onion.name)
       expect(page).to have_content(@salt.name)
     end
+
+    it 'displays total cost of ingredients' do 
+      visit "recipes/#{@beans.id}"
+      expect(page).to have_content("Total Cost: 15")
+    end
   end
 end
