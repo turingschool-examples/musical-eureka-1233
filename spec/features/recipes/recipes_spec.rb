@@ -14,5 +14,6 @@ RSpec.describe "the recipes show page" do
     expect(page).to have_content(recipe1.genre)
     expect(page).to have_content(ingredient1.name)
     expect(page).to have_content(ingredient2.name)
+    save_and_open_page
   end
 end
