@@ -25,6 +25,5 @@ RSpec.describe "the recipes show page" do
     visit "/recipes/#{recipe1.id}"
 
     expect(page).to have_content("Total Cost: 5")
-    save_and_open_page
   end
 end
