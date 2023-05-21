@@ -231,6 +231,25 @@
           null
         ]
       },
+      "/Users/ashleyplasket/2mod/ics/musical-eureka-1233/spec/models/ingredient_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/ashleyplasket/2mod/ics/musical-eureka-1233/app/models/ingredient.rb": {
         "lines": [
           1,
@@ -299,6 +318,6 @@
         ]
       }
     },
-    "timestamp": 1684687391
+    "timestamp": 1684687510
   }
 }
