@@ -222,6 +222,8 @@
           null,
           null,
           null,
+          null,
+          1,
           null
         ]
       },
@@ -248,57 +250,22 @@
           null
         ]
       },
-      "/Users/jessethomas/Desktop/Desktop - Turing (2)/turing_work/2mod/IC/musical-eureka-1233/spec/models/recipe_ingredients_spec.rb": {
+      "/Users/jessethomas/Desktop/Desktop - Turing (2)/turing_work/2mod/IC/musical-eureka-1233/app/controllers/ingredients_controller.rb": {
         "lines": [
           1,
-          null,
           1,
-          null,
           1,
-          2,
-          2,
           null,
           null
         ]
       },
-      "/Users/jessethomas/Desktop/Desktop - Turing (2)/turing_work/2mod/IC/musical-eureka-1233/app/models/recipe_ingredient.rb": {
+      "/Users/jessethomas/Desktop/Desktop - Turing (2)/turing_work/2mod/IC/musical-eureka-1233/app/controllers/application_controller.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/jessethomas/Desktop/Desktop - Turing (2)/turing_work/2mod/IC/musical-eureka-1233/spec/models/recipe_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/jessethomas/Desktop/Desktop - Turing (2)/turing_work/2mod/IC/musical-eureka-1233/app/models/recipe.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
           1,
           null
         ]
       }
     },
-    "timestamp": 1684679280
+    "timestamp": 1684680814
   }
 }
