@@ -4,6 +4,7 @@ RSpec.describe "/recipes/id" do
   before :each do
     @milk = Ingredient.create!(name: "Milk", cost: 2)
     @flour = Ingredient.create!(name: "Flour", cost: 1)
+    @sugar = Ingredient.create!(name: "Sugar", cost: 2)
 
     @cake = Recipe.create!(name: "Cookies", complexity: 3, genre: "Desert")
     @soup = Recipe.create!(name: "Pea Soup", complexity: 4, genre: "Dinner")
@@ -26,10 +27,14 @@ RSpec.describe "/recipes/id" do
       expect(page).to have_content(@milk.name)
       expect(page).to have_content(@flour.name)
     end
+
     it 'displays the total cost of the ingredients' do
       visit "/recipes/#{@cake.id}"
-      save_and_open_page
       expect(page).to have_content("Total Cost of Ingredients: 3")
+    end
+
+    it 'displays a form to add a new ingredient to this recipe' do
+      
     end
   end
 end

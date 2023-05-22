@@ -15,6 +15,7 @@ RSpec.describe "/ingrediants" do
     end
     it 'displays the list of ingredients alphabetically' do
       visit "/ingredients"
+      save_and_open_page
       expect(@flour.name).to appear_before(@milk.name)
     end
   end
