@@ -12,6 +12,7 @@ RSpec.describe "recipes show page", type: :feature do
     @ingredient_7 = @recipe_1.ingredients.create!(name: "Garlic", cost: 2)
     @ingredient_8 = @recipe_1.ingredients.create!(name: "Fennel", cost: 2)
     @ingredient_9 = @recipe_1.ingredients.create!(name: "Liquid Smoke", cost: 5)
+    @ingredient_10 = Ingredient.create!(name: "Italian Seasoning", cost: 2)
   end
 
   it "displays the recipe's name, complexity, and genre with a list of names of ingredients for the recipe" do
@@ -35,7 +36,17 @@ RSpec.describe "recipes show page", type: :feature do
   
   it "displays total cost of all ingredients in the recipe" do 
     visit "/recipes/#{@recipe_1.id}"
-
+    
     expect(page).to have_content("Total cost for all ingredients: #{@recipe_1.recipe_cost}")
+  end
+  
+  it "has a form to add ingredients to the recipe" do 
+    visit "/recipes/#{@recipe_1.id}"
+
+    fill_in "Ingredient ID", with: "#{@ingredient_10.id}"
+    click "Submit" 
+
+    expect(current_path).to eq("/recipes/#{@recipe_1.id}")
+    expect(page).to have_content("#{@ingredient_10.name}")
   end
 end
