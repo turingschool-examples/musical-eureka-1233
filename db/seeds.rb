@@ -17,7 +17,7 @@
 @ingredient_9 = Ingredient.create!(name: "Liquid Smoke", cost: 5)
 
 @ingredient_10 = Ingredient.create!(name: "Silken Tofu", cost: 1)
-@ingredient_10 = Ingredient.create!(name: "Dark Chocolate", cost: 4)
+@ingredient_18 = Ingredient.create!(name: "Dark Chocolate", cost: 4)
 @ingredient_11 = Ingredient.create!(name: "Sea Salt", cost: 2)
 @ingredient_12 = Ingredient.create!(name: "Maple Syrup", cost: 5)
 
@@ -30,3 +30,23 @@
 @recipe_1 = Recipe.create!(name: "Vegan Meatball Soup", complexity:4, genre: "Soups")
 @recipe_2 = Recipe.create!(name: "Chocolate Mousse", complexity:1, genre: "Desserts")
 @recipe_3 = Recipe.create!(name: "Miso Dressing", complexity:1, genre: "Sauces")
+
+RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_1)
+RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_2)
+RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_3)
+RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_4)
+RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_5)
+RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_6)
+RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_7)
+RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_9)
+
+RecipeIngredient.create!(recipe: @recipe_2, ingredient: @ingredient_10)
+RecipeIngredient.create!(recipe: @recipe_2, ingredient: @ingredient_18)
+RecipeIngredient.create!(recipe: @recipe_2, ingredient: @ingredient_11)
+RecipeIngredient.create!(recipe: @recipe_2, ingredient: @ingredient_12)
+
+RecipeIngredient.create!(recipe: @recipe_3, ingredient: @ingredient_13)
+RecipeIngredient.create!(recipe: @recipe_3, ingredient: @ingredient_14)
+RecipeIngredient.create!(recipe: @recipe_3, ingredient: @ingredient_15)
+RecipeIngredient.create!(recipe: @recipe_3, ingredient: @ingredient_16)
+RecipeIngredient.create!(recipe: @recipe_3, ingredient: @ingredient_17)
