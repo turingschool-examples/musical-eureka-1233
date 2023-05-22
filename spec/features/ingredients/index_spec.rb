@@ -4,9 +4,6 @@ RSpec.describe "/ingrediants" do
   before :each do
     @milk = Ingredient.create!(name: "Milk", cost: 2)
     @flour = Ingredient.create!(name: "Flour", cost: 1)
-
-    @cake = Recipe.create!(name: "Cookies", complexity: 3, genre: "Desert")
-    @soup = Recipe.create!(name: "Pea Soup", complexity: 4, genre: "Dinner")
   end
   describe "As a visitor, when I visit the ingrediants index page" do
     it 'Displays a list of all the ingrediants including their name and cost' do
