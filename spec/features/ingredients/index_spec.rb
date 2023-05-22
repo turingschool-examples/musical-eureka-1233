@@ -18,4 +18,10 @@ RSpec.describe "ingredients index page", type: :feature do
     expect(page).to have_content("Cost: #{@ingredient_2.cost}")
     expect(page).to have_content("Cost: #{@ingredient_1.cost}")
   end
+
+  it "displays ingredients listed in alphabetical order" do 
+    expect("#{@ingredient_3.name}").to appear_before("#{@ingredient_2.name}")
+    expect("Celery").to appear_before("TVP")
+    expect("TVP").to_not appear_before("Carrots")
+  end
 end
