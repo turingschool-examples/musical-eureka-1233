@@ -38,6 +38,7 @@ RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_4)
 RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_5)
 RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_6)
 RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_7)
+RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_8)
 RecipeIngredient.create!(recipe: @recipe_1, ingredient: @ingredient_9)
 
 RecipeIngredient.create!(recipe: @recipe_2, ingredient: @ingredient_10)
