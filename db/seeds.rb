@@ -5,3 +5,28 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+@ingredient_1 = Ingredient.create!(name: "TVP", cost: 3)
+@ingredient_2 = Ingredient.create!(name: "Celery", cost: 1)
+@ingredient_3 = Ingredient.create!(name: "Carrots", cost: 2)
+@ingredient_4 = Ingredient.create!(name: "Parsnips", cost: 1)
+@ingredient_5 = Ingredient.create!(name: "Vital Wheat Gluten", cost: 3)
+@ingredient_6 = Ingredient.create!(name: "Onion", cost: 4)
+@ingredient_7 = Ingredient.create!(name: "Garlic", cost: 2)
+@ingredient_8 = Ingredient.create!(name: "Fennel", cost: 2)
+@ingredient_9 = Ingredient.create!(name: "Liquid Smoke", cost: 5)
+
+@ingredient_10 = Ingredient.create!(name: "Silken Tofu", cost: 1)
+@ingredient_10 = Ingredient.create!(name: "Dark Chocolate", cost: 4)
+@ingredient_11 = Ingredient.create!(name: "Sea Salt", cost: 2)
+@ingredient_12 = Ingredient.create!(name: "Maple Syrup", cost: 5)
+
+@ingredient_13 = Ingredient.create!(name: "Miso Paste", cost: 5)
+@ingredient_14 = Ingredient.create!(name: "Rice Vinegar", cost: 3)
+@ingredient_15 = Ingredient.create!(name: "Soy Sauce", cost: 3)
+@ingredient_16 = Ingredient.create!(name: "Toasted Sesame Seed Oil", cost: 4)
+@ingredient_17 = Ingredient.create!(name: "Mirin", cost: 4)
+
+@recipe_1 = Recipe.create!(name: "Vegan Meatball Soup", complexity:4, genre: "Soups")
+@recipe_2 = Recipe.create!(name: "Chocolate Mousse", complexity:1, genre: "Desserts")
+@recipe_3 = Recipe.create!(name: "Miso Dressing", complexity:1, genre: "Sauces")
