@@ -34,7 +34,14 @@ RSpec.describe "/recipes/id" do
     end
 
     it 'displays a form to add a new ingredient to this recipe' do
-      
+      visit "/recipes/#{@cake.id}"
+      save_and_open_page
+      expect(page).to have_field("Add Ingredient")
+
+      fill_in("Add Ingredient", with: "Sugar")
+      click_on "Add"
+
+      expect(current_path).to eq("/recipes/#{@cake.id}")
     end
   end
 end
