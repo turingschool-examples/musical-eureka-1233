@@ -13,6 +13,9 @@ RSpec.describe "/ingrediants" do
       expect(page).to have_content(@flour.name)
       expect(page).to have_content(@flour.cost)
     end
-    
+    it 'displays the list of ingredients alphabetically' do
+      visit "/ingredients"
+      expect(@flour.name).to appear_before(@milk.name)
+    end
   end
 end
