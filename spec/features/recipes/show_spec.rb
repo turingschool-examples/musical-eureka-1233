@@ -42,9 +42,9 @@ RSpec.describe "recipes show page", type: :feature do
   
   it "has a form to add ingredients to the recipe" do 
     visit "/recipes/#{@recipe_1.id}"
-
+save_and_open_page
     fill_in "Ingredient ID", with: "#{@ingredient_10.id}"
-    click "Submit" 
+    click_button "Submit" 
 
     expect(current_path).to eq("/recipes/#{@recipe_1.id}")
     expect(page).to have_content("#{@ingredient_10.name}")
