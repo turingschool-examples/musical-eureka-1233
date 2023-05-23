@@ -18,5 +18,12 @@ RSpec.describe "/ingredients", type: :feature do
       expect(page).to have_content("#{@ing3.name}")
       expect(page).to have_content("$#{@ing3.cost}")
     end
+
+    it "displays all of the ingredients sorted alphabetically" do
+      visit "/ingredients"
+
+      expect("#{@ing2.name}").to appear_before("#{@ing1.name}")
+      expect("#{@ing1.name}").to appear_before("#{@ing3.name}")
+    end
   end
 end
