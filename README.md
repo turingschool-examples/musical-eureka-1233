@@ -1,7 +1,3 @@
-Steven Stackhouse
-
-I was very happy with my performance on the first Independant Challenge of mod 2. I was able to get through all three user stories in about 1.5 hours without any real hangups. I finished extension 1 (sort ingredients alphabetically) without much issue, but for some reason, my ingredients index page tests wouldn't work. It has something (I think) to do with Capybara. The `appears_before` method was returning an "undefined method" warning. I know the rails_helper file included those 4 lines of code - so that wasn't the problem. Since `appears_before` is the only way I know of for testing sort_alphabetical, I  decided to remove all of the extension 1 code from my IC and submit it with just user stories 1-3 included.
-
 # Hells Kitchen
 
 This repository requires and has been tested on Ruby v3.1.1 and is based on Rails 7.0.4.
