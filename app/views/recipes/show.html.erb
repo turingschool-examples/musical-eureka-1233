@@ -7,3 +7,14 @@
   </ul>
 <% end %>
 <h3>Total Cost: $<%= @recipe.total_cost %></h3>
+<br>
+<h3>Add Ingredient to <%= @recipe.name %></h3>
+<%= form_with url: "/recipes/#{@recipe.id}", method: :patch, local: true do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name%>
+  <br>
+  <%= f.label :cost %>
+  <%= f.number_field :cost %>
+  <br>
+  <%= f.submit "Submit" %>
+<% end %>
