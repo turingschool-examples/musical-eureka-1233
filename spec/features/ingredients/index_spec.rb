@@ -11,7 +11,6 @@ RSpec.describe "ingredients index" do
 
   it 'lists all ingredients with their name and cost' do
     visit "/ingredients"
-    save_and_open_page
 
     expect(page).to have_content("#{@tomatoe.name} : #{@tomatoe.cost}")
     expect(page).to have_content("#{@lettuce.name} : #{@lettuce.cost}")
