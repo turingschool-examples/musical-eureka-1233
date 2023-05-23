@@ -34,7 +34,7 @@ RSpec.describe "Recipes Show page" do
   describe "User story 3" do
     let!(:ingredient_1) { Ingredient.create!(name: "Ground Beef", cost: "4")}
     let!(:ingredient_2) { Ingredient.create!(name: "Salt", cost: "18")}
-    let!(:recipe_1) { Recipe.create!(name: "Hot Juicy Burgers", complexity: "2", genre: "American")}
+    # let!(:recipe_1) { Recipe.create!(name: "Hot Juicy Burgers", complexity: "2", genre: "American")}
     let!(:recipe_2) { Recipe.create!(name: "Hummus", complexity: "1", genre: "Middle Eastern")}
     let!(:recipe_ingredient_3) { RecipeIngredient.create!(ingredient_id: ingredient_1.id, recipe_id: recipe_2.id)}
     let!(:recipe_ingredient_4) { RecipeIngredient.create!(ingredient_id: ingredient_2.id, recipe_id: recipe_2.id)}
@@ -45,6 +45,23 @@ RSpec.describe "Recipes Show page" do
 
       expect(page).to have_content("Total Cost:22")
       expect(page).to_not have_content("Total Cost:6")
+    end
+  end
+
+  describe "Extention 2" do
+    let!(:ingredient_1) { Ingredient.create!(name: "Ground Beef", cost: "4")}
+    let!(:ingredient_2) { Ingredient.create!(name: "Salt", cost: "18")}
+    let!(:recipe_2) { Recipe.create!(name: "Hummus", complexity: "1", genre: "Middle Eastern")}
+    let!(:recipe_ingredient_3) { RecipeIngredient.create!(ingredient_id: ingredient_1.id, recipe_id: recipe_2.id)}
+    let!(:recipe_ingredient_4) { RecipeIngredient.create!(ingredient_id: ingredient_2.id, recipe_id: recipe_2.id)}
+
+    it "displays form to add an ingredient to this recipe" do
+      visit "/recipes/#{recipe_2.id}"
+        expect(page).to have_content("Name: #{ingredient_1.name}")
+        expect(page).to have_content("Name:#{ingredient_2.name}")
+        expect(page).to have_button("Submit Ingredient")
+        
+
     end
   end
 end
