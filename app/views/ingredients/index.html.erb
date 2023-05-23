@@ -1,0 +1,5 @@
+<h1 style="font-size:50px;"><center>Ingredients</h1>
+
+<% @ingredients.each do |ingredient| %>
+  <li><%= ingredient.name %>: <%= number_to_currency(ingredient.cost) %></li>
+<% end %>
