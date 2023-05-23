@@ -100,8 +100,30 @@ RSpec.describe "/recipes/:id", type: :feature do
 
     it "shows the total cost of all the ingredients in the recipe" do
       visit "/recipes/#{@recipe_3.id}"
-      
+
       expect(page).to have_content("Total Cost: $15")
+    end
+  end
+
+  describe "add an ingredient to recipe" do
+    xit "creates a form to add an ingredient to a recipe" do
+      visit "/recipes/#{@recipe_3.id}"
+
+      expect(page).to have_content(@recipe_3.name)
+      expect(page).to have_content(@recipe_3.complexity)
+      expect(page).to have_content(@recipe_3.genre)
+      expect(page).to have_content(@ingredient_1.name)
+      expect(page).to have_content(@ingredient_2.name)
+      expect(page).to have_content(@ingredient_7.name)
+      expect(page).to have_content(@ingredient_8.name)
+      expect(page).to have_content(@ingredient_9.name)
+
+      fill_in(:name, with: "Ingredient_Name")
+      fill_in(:cost, with: 100)
+      click_button("Submit")
+
+      expect(page).to have_content("Ingredient Name")
+      expect(page).to have_content(100)
     end
   end
 end
