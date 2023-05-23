@@ -25,5 +25,9 @@ RSpec.describe Ingredient, type: :model do
       it "::total_cost" do
          expect(risotto.ingredients.total_cost).to eq(19)
       end
+
+      it "::order_alpha" do
+         expect(Ingredient.order_alpha).to eq([ing_1, ing_2, ing_3])
+      end
    end
 end
