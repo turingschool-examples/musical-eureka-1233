@@ -21,12 +21,20 @@ RSpec.describe 'Recipe Show Page' do
     risotto.ingredients << [ing_1, ing_2, ing_3, ing_4, ing_5, ing_6]
 
     visit recipe_path(risotto.id)
-      
+
     expect(page).to have_content(ing_1.name)
     expect(page).to have_content(ing_2.name)
     expect(page).to have_content(ing_3.name)
     expect(page).to have_content(ing_4.name)
     expect(page).to have_content(ing_5.name)
     expect(page).to have_content(ing_6.name)
+  end
+
+  it 'should display the total cost of the recipe' do
+    risotto.ingredients << [ing_1, ing_2, ing_3, ing_4, ing_5, ing_6]
+
+    visit recipe_path(risotto)
+    
+    expect(page).to have_content("Total Cost: $48.00")
   end
 end

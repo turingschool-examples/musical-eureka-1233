@@ -1,11 +1,13 @@
 <h1 style="font-size:50px;"><center>Recipes</h1>
 
-<h2>Dish Name:</h2> <%= @recipe.name %>
-<h2>Level Of Complexity:</h2> <%= @recipe.complexity %>/10
-<h2>Cuisine:</h2> <%= @recipe.genre %>
+<h2>Dish Name:</h2> <h3><%= @recipe.name %></h3>
+<h2>Level Of Complexity:</h2> <h3><%= @recipe.complexity %>/10</h3>
+<h2>Cuisine:</h2> <h3><%= @recipe.genre %></h3>
 <br>
-<br>
+
+<h2>Total Cost: <b style="color:red;"><%= number_to_currency(@ingredients.total_cost)%></b></h2>
 <h1 style="background-color:grey;"><center>Ingredients For This Recipe</h1>
 <ol><% @ingredients.each do |ingredient| %>
   <li><h2><%= ingredient.name %></h2>
 <% end %></ol>
+
