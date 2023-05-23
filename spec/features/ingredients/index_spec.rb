@@ -1,10 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Ingredients Index Page", type: :feature do
-
   let!(:ingredient1) { Ingredient.create!(name: "Peach", cost: "5")}
-
-
 
   describe "ingredients listed" do
     it "should display the list of ingredients including their name and cost" do
