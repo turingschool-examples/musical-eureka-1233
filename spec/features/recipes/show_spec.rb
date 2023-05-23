@@ -44,6 +44,7 @@ RSpec.describe "Recipes Show page" do
       save_and_open_page
 
       expect(page).to have_content("Total Cost:22")
+      expect(page).to_not have_content("Total Cost:6")
     end
   end
 end
