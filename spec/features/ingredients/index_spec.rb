@@ -10,9 +10,23 @@ RSpec.describe 'Ingredients Index Page' do
 
   it 'should display a list of ingredients with names and cost' do
     visit ingredients_path
-    
+
     expect(page).to have_content(ing_1.name)
     expect(page).to have_content(ing_1.cost)
+    expect(page).to have_content(ing_2.name)
+    expect(page).to have_content(ing_2.cost)
+    expect(page).to have_content(ing_3.name)
+    expect(page).to have_content(ing_3.cost)
+  end
+
+  it 'should display ingredients in alphabetical order' do
+    visit ingredients_path
+    
+    expect(ing_1.name).to appear_before(ing_5.name)
+    expect(ing_5.name).to appear_before(ing_6.name)
+    expect(ing_6.name).to appear_before(ing_2.name)
+    expect(ing_2.name).to appear_before(ing_3.name)
+    expect(ing_3.name).to appear_before(ing_4.name)
   end
 end
 #save_and_open_page

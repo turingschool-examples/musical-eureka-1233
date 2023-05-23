@@ -7,4 +7,8 @@ class Ingredient < ApplicationRecord
    def self.total_cost
       self.sum(:cost)
    end
+
+   def self.order_alpha
+      self.order(:name)
+   end
 end
