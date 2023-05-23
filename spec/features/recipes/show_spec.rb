@@ -41,12 +41,12 @@ RSpec.describe "the recipes show page" do
   end
 
   it "provides the total cost of all ingredients for the recipe" do
-    expect(page).to have_content("Total Cost: $ 12")
+    expect(page).to have_content("Total Ingredients Cost: $ 12")
   
     visit "/recipes/#{@recipe2.id}"
 
-    expect(page).to have_content("Total Cost: $ 8")
-
+    expect(page).to have_content("Total Ingredients Cost: $ 8")
+    save_and_open_page
   end
 
 end
