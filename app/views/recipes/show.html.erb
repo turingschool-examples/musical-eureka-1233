@@ -16,3 +16,11 @@
 </div>
 
 
+<h1>New Ingredients</h1>
+<%= form_with url: "/recipes/#{@recipe.id}", method: :post, local: true do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+
+  <%= f.submit "Submit Ingredient" %>
+<% end %>
