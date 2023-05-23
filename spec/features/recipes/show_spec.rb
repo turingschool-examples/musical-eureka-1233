@@ -55,12 +55,18 @@ RSpec.describe "/recipes/:id", type: :feature do
       expect(page).to have_content(@ingredient_8.name)
       expect(page).to have_content(@ingredient_9.name)
     end
+
+    it "shows the total cost of all the ingredients in the recipe" do
+      visit "/recipes/#{@recipe_1.id}"
+
+      expect(page).to have_content("Total Cost: $25")
+    end
   end
 
   describe "show Tried and True page" do
     it "shows a specific recipe with name, complexity and genre along with a list of the names of the ingredients for the recipe" do
       visit "/recipes/#{@recipe_2.id}"
-      
+
       expect(page).to have_content(@recipe_2.name)
       expect(page).to have_content(@recipe_2.complexity)
       expect(page).to have_content(@recipe_2.genre)
@@ -69,6 +75,12 @@ RSpec.describe "/recipes/:id", type: :feature do
       expect(page).to have_content(@ingredient_6.name)
       expect(page).to have_content(@ingredient_7.name)
       expect(page).to have_content(@ingredient_8.name)
+    end
+
+    it "shows the total cost of all the ingredients in the recipe" do
+      visit "/recipes/#{@recipe_2.id}"
+
+      expect(page).to have_content("Total Cost: $21")
     end
   end
 
@@ -84,6 +96,12 @@ RSpec.describe "/recipes/:id", type: :feature do
       expect(page).to have_content(@ingredient_7.name)
       expect(page).to have_content(@ingredient_8.name)
       expect(page).to have_content(@ingredient_9.name)
+    end
+
+    it "shows the total cost of all the ingredients in the recipe" do
+      visit "/recipes/#{@recipe_3.id}"
+      
+      expect(page).to have_content("Total Cost: $15")
     end
   end
 end
