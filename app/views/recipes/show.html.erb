@@ -5,11 +5,14 @@
 </section>
 
 <section>
-  <h6>Ingredients</h6>
+  <h4>Ingredients</h4>
   <p><% @ingredients.each do |ingredient| %></p>
   <p><%= ingredient.name %></p>
   <% end %>
 </section>
 
+<div>
+  <p>Total Cost:<%= @ingredients.sum { |i| i.cost } %></p>
+</div>
 
 
