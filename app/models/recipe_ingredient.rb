@@ -5,4 +5,5 @@ class RecipeIngredient < ApplicationRecord
   def self.find_ingredients(query_id)
     where("recipe_id = #{query_id}")
   end
+
 end
