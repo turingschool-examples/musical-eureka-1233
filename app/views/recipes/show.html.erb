@@ -6,9 +6,11 @@
   <p>Complexity: <%= @recipes.complexity %></p>
   <p>Genre: <%= @recipes.genre %></p>
 
-  <h3> Ingredients </h3>
-    <ul>
-      <% @recipes.ingredients.each do |ingredient| %>
-        <li><%= ingredient.name %> </li>
-      <% end %>
-    </ul>
+  
+  <ul>
+    <h3> Ingredients </h3>
+    <% @recipes.ingredients.each do |ingredient| %>
+      <li><%= ingredient.name %> </li>
+    <% end %>
+    <p> Total Cost: <%= @recipes.ingredients.total_cost %></p>
+  </ul>

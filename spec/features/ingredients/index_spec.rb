@@ -24,5 +24,11 @@ RSpec.describe Ingredient, type: :feature do
       expect(page).to have_content("Name: #{@pasta.name}")
       expect(page).to have_content("Cost: #{@pasta.cost}")
     end
+
+    it "lists ingredients alphabetically" do
+      visit "/ingredients"
+
+
+    end
   end
 end

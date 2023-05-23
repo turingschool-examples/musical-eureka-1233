@@ -68,7 +68,14 @@ RSpec.describe Recipe, type: :feature do
       expect(page).to_not have_content(@rec_ingredients2.ingredient.name)
       expect(page).to_not have_content(@rec_ingredients3.ingredient.name)
       expect(page).to_not have_content(@rec_ingredients4.ingredient.name)
-
     end
-  end
+
+    it "shows total cost of ingredients in recipes" do
+      visit "/recipes/#{@recipe1.id}"
+      expect(page).to have_content("Total Cost: 21")
+
+      visit "/recipes/#{@recipe2.id}"
+      expect(page).to have_content("Total Cost: 10")
+    end
+  end 
 end
