@@ -60,7 +60,7 @@ RSpec.describe "/recipes/:id", type: :feature do
   describe "show Tried and True page" do
     it "shows a specific recipe with name, complexity and genre along with a list of the names of the ingredients for the recipe" do
       visit "/recipes/#{@recipe_2.id}"
-      save_and_open_page
+      
       expect(page).to have_content(@recipe_2.name)
       expect(page).to have_content(@recipe_2.complexity)
       expect(page).to have_content(@recipe_2.genre)
