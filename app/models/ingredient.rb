@@ -7,6 +7,7 @@ class Ingredient < ApplicationRecord
       sum(:cost)
    end
 
+
    def self.sort_alpha
       order(name: :asc)
    end

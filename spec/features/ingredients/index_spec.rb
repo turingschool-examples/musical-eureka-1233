@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe Ingredient, type: :feature do
-  
   describe "ingredients index" do
     before :each do 
       @tomatoes = Ingredient.create!(name: "tomatoes", cost: 5)
@@ -9,6 +8,7 @@ RSpec.describe Ingredient, type: :feature do
       @beef = Ingredient.create!(name: "ground beef", cost: 10)
       @pasta = Ingredient.create!(name: "spaghetti", cost: 2)
     end
+
     it "has list of all ingredients" do
       visit "/ingredients"
 
@@ -28,7 +28,10 @@ RSpec.describe Ingredient, type: :feature do
     it "lists ingredients alphabetically" do
       visit "/ingredients"
 
-
+      within "/ingredients"
+      expect(@beef.name).to appear_before(@oil.name)
+      expect(@oil.name).to appear_before(@pasta.name)
+      expect(@pasta.name).to appear_before(@tomatoes.name)
     end
   end
 end
