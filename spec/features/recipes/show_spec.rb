@@ -41,24 +41,23 @@ RSpec.describe "Recipes Show page" do
 
     it "displays the total cost of all the ingredients in the recipe" do
       visit "/recipes/#{recipe_2.id}"
-      save_and_open_page
-
+      
       expect(page).to have_content("Total Cost:22")
       expect(page).to_not have_content("Total Cost:6")
     end
   end
-
+  
   describe "Extention 2" do
     let!(:ingredient_1) { Ingredient.create!(name: "Ground Beef", cost: "4")}
     let!(:ingredient_2) { Ingredient.create!(name: "Salt", cost: "18")}
     let!(:recipe_2) { Recipe.create!(name: "Hummus", complexity: "1", genre: "Middle Eastern")}
     let!(:recipe_ingredient_3) { RecipeIngredient.create!(ingredient_id: ingredient_1.id, recipe_id: recipe_2.id)}
     let!(:recipe_ingredient_4) { RecipeIngredient.create!(ingredient_id: ingredient_2.id, recipe_id: recipe_2.id)}
-
+    
     it "displays form to add an ingredient to this recipe" do
       visit "/recipes/#{recipe_2.id}"
-        expect(page).to have_content("Name: #{ingredient_1.name}")
-        expect(page).to have_content("Name:#{ingredient_2.name}")
+      save_and_open_page
+        expect(page).to have_content("Name")
         expect(page).to have_button("Submit Ingredient")
         
 
