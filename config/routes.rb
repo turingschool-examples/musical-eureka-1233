@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :ingredients, only: :index
+
+  resources :recipes, only: :show
 end

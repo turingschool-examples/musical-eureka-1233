@@ -10,16 +10,9 @@ RSpec.describe 'Ingredients Index Page' do
 
   it 'should display a list of ingredients with names and cost' do
     visit ingredients_path
-    save_and_open_page
+    
     expect(page).to have_content(ing_1.name)
     expect(page).to have_content(ing_1.cost)
   end
 end
-
-# User Story 1 - Ingredients Index
-
-# As a visitor,
-# When I visit '/ingredients'
-# I see a list of all the ingredients including their name and cost
-# (e.g. "Ground Beef: 2"
-#      "Salt: 4")
+#save_and_open_page
