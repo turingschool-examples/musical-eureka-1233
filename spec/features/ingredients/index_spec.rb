@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "the ingredients index" do
+RSpec.describe "the ingredients index page" do
   before(:each) do
     @beef = Ingredient.create!(name: "Ground Beef", cost: 2)
     @salt = Ingredient.create!(name: "Salt", cost: 4)
