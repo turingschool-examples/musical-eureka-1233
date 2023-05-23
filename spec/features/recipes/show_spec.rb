@@ -12,9 +12,6 @@ RSpec.describe "ingredients index" do
     @ham_sandwich = Recipe.create!(name: "Ham Sandwich", complexity: 1, genre: "Meat Sandwich")
     @bacon_sandwich = Recipe.create!(name: "Bacon Sandwich", complexity: 1, genre: "Meat Sandwich")
 
-    @lt_recipe = RecipeIngredients.create!(ingredient_id: @tomatoe.id, ingredient_id: @lettuce.id, ingredient_id: @bread.id, recipe_id: @lt.id )
-    @ham_sandwich_recipe = RecipeIngredients.create!(ingredient_id: @ham.id, ingredient_id: @bread.id, recipe_id: @ham_sandwich.id)
-    @bacon_sandwich_recipe = RecipeIngredients.create!(ingredient_id: @bacon.id, ingredient_id: @bread.id, recipe_id: @bacon_sandwich.id)
   end
 
   it 'show recipe with name, complexity, and genre' do
@@ -38,6 +35,14 @@ RSpec.describe "ingredients index" do
   end
 
   it 'show a list of the ingredients for the recipe' do
+    @lt_recipe = RecipeIngredient.create!(recipe_id: @lt.id, ingredient_id: @tomatoe.id)
+    @lt_recipe2 = RecipeIngredient.create!(recipe_id: @lt.id, ingredient_id: @lettuce.id)
+    @lt_recipe3 = RecipeIngredient.create!(recipe_id: @lt.id, ingredient_id: @bread.id)
+    @ham_sandwich_recipe = RecipeIngredient.create!(recipe_id: @ham_sandwich.id, ingredient_id: @ham.id)
+    @ham_sandwich_recipe2 = RecipeIngredient.create!(recipe_id: @ham_sandwich.id, ingredient_id: @bread.id)
+    @bacon_sandwich_recipe = RecipeIngredient.create!(recipe_id: @bacon_sandwich.id, ingredient_id: @bacon.id)
+    @bacon_sandwich_recipe2 = RecipeIngredient.create!(recipe_id: @bacon_sandwich.id, ingredient_id: @bread.id)
+
     visit "/recipes/#{@lt.id}"
 
     expect(page).to have_content("tomatoe")
