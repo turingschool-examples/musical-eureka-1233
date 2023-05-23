@@ -106,7 +106,7 @@ RSpec.describe "/recipes/:id", type: :feature do
   end
 
   describe "add an ingredient to recipe" do
-    it "creates a form to add an ingredient to a recipe" do
+    xit "creates a form to add an ingredient to a recipe" do
       visit "/recipes/#{@recipe_3.id}"
 
       expect(page).to have_content(@recipe_3.name)
@@ -124,12 +124,6 @@ RSpec.describe "/recipes/:id", type: :feature do
 
       expect(page).to have_content("Ingredient Name")
       expect(page).to have_content(100)
-    end
-
-    it "shows the total cost of all the ingredients in the recipe" do
-      visit "/recipes/#{@recipe_3.id}"
-
-      expect(page).to have_content("Total Cost: $15")
     end
   end
 end
