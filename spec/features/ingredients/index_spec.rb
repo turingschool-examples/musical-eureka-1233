@@ -1,9 +1,9 @@
 require "rails_helper"
 
 RSpec.describe "the ingredients index page" do
-  let!(:ingredient_1) { Ingredient.create(name: "Ground Beef", cost: 3) }
-  let!(:ingredient_2) { Ingredient.create(name: "Bread", cost: 1) }
-  let!(:ingredient_3) { Ingredient.create(name: "Cheese", cost: 2) }
+  let!(:ingredient_1) { Ingredient.create!(name: "Ground Beef", cost: 3) }
+  let!(:ingredient_2) { Ingredient.create!(name: "Bread", cost: 1) }
+  let!(:ingredient_3) { Ingredient.create!(name: "Cheese", cost: 2) }
 
   before(:each) do
     visit "/ingredients"
