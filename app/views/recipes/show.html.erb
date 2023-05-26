@@ -11,4 +11,9 @@
   </ul>
 <% end %><br/>
 
-<h3>Total Cost: $<%= @recipe.total_cost %></h3>
+<h3>Total Cost: $<%= @recipe.total_cost %></h3><br/>
+
+<form action="/recipes/<%= @recipe.id %>" method="post">
+  <label for="ingredient_id">Add an Ingredient to this Recipe by Ingredient ID</label>
+  <input type="number" name="ingredient_id" id="ingredient_id">
+  <input type="submit" value="Submit">

@@ -41,7 +41,7 @@ RSpec.describe "the recipes show page" do
     end
 
     it "lists the total cost of the recipe" do
-      expect(page).to have_content("Total Cost: $#{recipe_1.total_cost}")
+      expect(page).to have_content("Total Cost: $7")
     end
   end
 
@@ -69,7 +69,21 @@ RSpec.describe "the recipes show page" do
     end
 
     it "lists the total cost of the recipe" do
-      expect(page).to have_content("Total Cost: $#{recipe_2.total_cost}")
+      expect(page).to have_content("Total Cost: $3")
+    end
+
+    it "displays a form to add an ingredient to the recipe" do
+      expect(page).to have_content("Add an Ingredient to this Recipe by Ingredient ID")
+      expect(page).to have_field(:ingredient_id)
+      expect(page).to have_button("Submit")
+
+      fill_in :ingredient_id, with: ingredient_1.id
+      click_button "Submit"
+
+      expect(current_path).to eq("/recipes/#{recipe_2.id}")
+
+      expect(page).to have_content(ingredient_1.name)
+      expect(page).to have_content("Total Cost: $6")
     end
   end
 end
