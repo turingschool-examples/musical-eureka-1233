@@ -1,6 +1,7 @@
 <h1><%= @recipe.name %></h1>
 <p>Complexity: <%= @recipe.complexity %></p>
-<p>Genre: <%= @recipe.genre %></p>
+<p>Genre: <%= @recipe.genre %></p><br/>
+
 <% unless @recipe.ingredients.empty? %>
   <h2>Ingredients:</h2>
   <ul id="ingredients">
@@ -8,4 +9,6 @@
         <li><strong><%= ingredient.name %></strong>
     <% end %>
   </ul>
-<% end %>
+<% end %><br/>
+
+<h3>Total Cost: $<%= @recipe.total_cost %></h3>
