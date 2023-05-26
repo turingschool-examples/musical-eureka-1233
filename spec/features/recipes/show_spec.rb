@@ -39,6 +39,10 @@ RSpec.describe "the recipes show page" do
         expect(page).to have_content(ingredient_4.name)
       end
     end
+
+    it "lists the total cost of the recipe" do
+      expect(page).to have_content("Total Cost: $#{recipe_1.total_cost}")
+    end
   end
 
   describe "recipe 2 show page" do
@@ -62,6 +66,10 @@ RSpec.describe "the recipes show page" do
         expect(page).to have_content(ingredient_3.name)
         expect(page).to_not have_content(ingredient_4.name)
       end
+    end
+
+    it "lists the total cost of the recipe" do
+      expect(page).to have_content("Total Cost: $#{recipe_2.total_cost}")
     end
   end
 end
