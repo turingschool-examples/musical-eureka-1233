@@ -18,4 +18,9 @@ RSpec.describe "the ingredients index page" do
     expect(page).to have_content(ingredient_3.name)
     expect(page).to have_content("Cost: $#{ingredient_3.cost}")
   end
+
+  it "lists ingredients alphabetically" do
+    expect(ingredient_2.name).to appear_before(ingredient_3.name)
+    expect(ingredient_3.name).to appear_before(ingredient_1.name)
+  end
 end
