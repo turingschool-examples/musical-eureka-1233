@@ -32,8 +32,8 @@ RSpec.describe Recipe, type: :model do
 
     context "#total_cost" do
       it "returns the total cost of all ingredients in a recipe" do
-        expect(@recipe_1.total_cost).to eq(7)
-        expect(@recipe_2.total_cost).to eq(3)
+        expect(recipe_1.total_cost).to eq(7)
+        expect(recipe_2.total_cost).to eq(3)
       end
     end
   end
